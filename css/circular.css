@@ -438,3 +438,7 @@ input.email {
 	width: 320px;
 }
 
+.facebook-f {
+	background: url('../images/facebook-f.png') no-repeat;
+	padding-left: 30px;
+}

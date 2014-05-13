@@ -6344,6 +6344,18 @@ Circular.App = {
 			});
 		});
 		
+		$(".signin-facebook").click(function(){
+			$.ajax({
+				url: "api/foauth.php?start=1", 
+				success: function(data){
+						window.location = data;
+				},
+				error: function(data){
+					new Circular.Views.Alert({type: "alert-error", content: "Unknown Facebook API error"});
+				}
+			});
+		});
+
 		$(".logout").click(function(e){
 			e.preventDefault();
 			$.ajax({
